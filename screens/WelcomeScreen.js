@@ -86,9 +86,7 @@ showModal = ()=>{
     <View style={styles.modalContainer}>
       <ScrollView style={{width:'100%'}}>
         <KeyboardAvoidingView style={styles.KeyboardAvoidingView}>
-        <Text
-          style={styles.modalTitle}
-          >Registration</Text>
+        <Text style={styles.modalTitle}>Registration</Text>
         <TextInput
           style={styles.formTextInput}
           placeholder ={"First Name"}
@@ -139,7 +137,8 @@ showModal = ()=>{
               emailId: text
             })
           }}
-        /><TextInput
+        />
+        <TextInput
           style={styles.formTextInput}
           placeholder ={"Password"}
           secureTextEntry = {true}
@@ -148,7 +147,8 @@ showModal = ()=>{
               password: text
             })
           }}
-        /><TextInput
+        />
+        <TextInput
           style={styles.formTextInput}
           placeholder ={"Confrim Password"}
           secureTextEntry = {true}
@@ -246,12 +246,11 @@ const styles = StyleSheet.create({
     width: 300,
     height: 40,
     borderBottomWidth: 2,
-    //borderBottomPadding: 50,
     borderColor: 'blue',
     fontSize: 25,
     marginLeft: 30,
-    marginBottom: 30
-,    paddingLeft: 20,
+    marginBottom: 30,    
+    paddingLeft: 20,
   },
   button: {
     width: 300,
@@ -260,7 +259,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 25,
     marginTop: 30,
-   backgroundColor: 'orange',
+    backgroundColor: 'orange',
     shadowColor: 'black',
     paddingLeft: 10,
     marginLeft: 30,
@@ -268,77 +267,76 @@ const styles = StyleSheet.create({
     shadowOffset: {
       width: 100,
       height: 800,
-   },
-   shadowOpacity: 100,
-   shadowRadius: 11.32,
-   elevation: 20,
+    },
+    shadowOpacity: 100,
+    shadowRadius: 11.32,
+    elevation: 20,
   },
   buttonText: {
     color: 'black',
-    // fontWidth:200,
     fontSize: 20,
     fontWeight: 'bold',
-    //marginBottom: 20
   },
   buttonContainer: {
     flex: 1,
     alignItems: 'center',
     paddingLeft: 20
   },
-    title :{
-     fontSize:40,
-     paddingLeft: 40,
-     paddingBottom: 40,
-     fontWeight:'bold',
-     paddingTop:100,
-     paddingRight: 50,
-     color : '#008080'
-   }, KeyboardAvoidingView:{
-     flex:1,
-     justifyContent:'center',
-     alignItems:'center',
-     backgroundColor:'#ffffff',
-     borderColor:'black',
-   },
-   modalTitle :{
-     justifyContent:'center',
-     alignSelf:'center',
-     fontSize:30,
-     color:'#008080',
-     margin:50
-   },
-   modalContainer:{
-     flex:1,
-     borderRadius: 20,
-     justifyContent:'center',
-     alignItems:'center',
-     backgroundColor:"white",
-     marginRight:30,
-     marginLeft : 30,
-     marginTop:80,
-     marginBottom:80,
-height: 700
-   },
-   formTextInput:{
-     width:"75%",
-     height:35,
-     alignSelf:'center',
-     borderColor:'black',
-     borderRadius:10,
-     borderWidth:1,
-     marginTop:20,
-     padding:10
-   },
-   registerButton:{
-     width:200,
-     height:40,
-     alignItems:'center',
-     justifyContent:'center',
-     borderWidth:1,
-     borderRadius:10,
-     marginTop:30
-   },
-   cancelButton:{
+  title :{
+    fontSize:40,
+    paddingLeft: 40,
+    paddingBottom: 40,
+    fontWeight:'bold',
+    paddingTop:100,
+    paddingRight: 50,
+    color : '#008080'
+  }, 
+  KeyboardAvoidingView:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'#ffffff',
+    borderColor:'black',
+  },
+  modalTitle :{
+    justifyContent:'center',
+    alignSelf:'center',
+    fontSize:30,
+    color:'#008080',
+    margin:50
+  },
+  modalContainer:{
+    flex:1,
+    borderRadius: 20,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:"white",
+    marginRight:30,
+    marginLeft : 30,
+    marginTop:80,
+    marginBottom:80,
+    height: 700
+  },
+  formTextInput:{
+    width:"75%",
+    height:35,
+    alignSelf:'center',
+    borderColor:'black',
+    borderRadius:10,
+    borderWidth:1,
+    marginTop:20,
+    padding:10
+  },
+  registerButton:{
+    width:200,
+    height:40,
+    alignItems:'center',
+    justifyContent:'center',
+    borderWidth:1,
+    borderRadius:10,
+    marginTop:30
+  },
+  cancelButton:{
     width:150,
     height:40,
     alignItems:'center',
@@ -348,12 +346,12 @@ height: 700
     marginTop:30,
     backgroundColor: 'yellow'
   },
-   registerButtonText:{
+  registerButtonText:{
      color:'#05B8CC',
      fontSize:15,
      fontWeight:'bold'
-   },
-   cancelButtonText:{
+  },
+  cancelButtonText:{
     color:'#05B8CC',
     fontSize:15,
     fontWeight:'bold'

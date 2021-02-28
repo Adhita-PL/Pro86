@@ -17,6 +17,7 @@ export default class HomeScreen extends React.Component{
     constructor(){
         super();
         this.state={
+            userName : firebase.auth().currentUser.email,
             item:"",
             description:"",
         }
@@ -24,6 +25,7 @@ export default class HomeScreen extends React.Component{
 
     addItem = (item, description)=>{
         db.collection("exchange_requests").add({
+            "userName" : this.state.userName,
             "item": this.state.item,
             "description" : this.state.description 
         });
