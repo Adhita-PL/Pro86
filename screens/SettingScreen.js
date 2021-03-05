@@ -13,7 +13,7 @@ import db from '../config';
 import firebase from 'firebase';
 import MyHeader from '../components/MyHeader.js'
 
-export default class HomeScreen extends React.Component{
+export default class SettingScreen extends React.Component{
   constructor(){
     super();
     this.state={

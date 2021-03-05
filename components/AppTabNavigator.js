@@ -9,24 +9,19 @@ import LoginScreen from '../screens/WelcomeScreen'
 
 export const AppTabNavigator = createBottomTabNavigator({
    HomeScreen:{
-    screen:HomeScreen,
-   navigationOptions:{
-  tabBarIcon :<Image source={require('../assets/request-list.png')} 
-style={{width: 20,height: 20}}
-/>,
-tabBarLabel: "HOME SCREEN",
-   }
-
-   } ,
-
-    Exchange:{
-   screen:ExchangeScreen,
-   navigationOptions:{
-       tabBarIcon :<Image source={require('../assets/request-list.png')} 
-style={{width: 20,height: 20}}
-/>,
-   tabBarLabel:"EXCHANGE SCREEN"
-   }
-
+      screen:HomeScreen,
+      navigationOptions:{
+         tabBarIcon :<Image source={require('../assets/request-list.png')} 
+         style={{width: 20,height: 20}}/>,
+         tabBarLabel: "HOME SCREEN",
+      }
+   },
+   Exchange:{
+      screen:ExchangeScreen,
+      navigationOptions:{
+         tabBarIcon :<Image source={require('../assets/request-list.png')} 
+         style={{width: 20,height: 20}}/>,
+         tabBarLabel:"EXCHANGE SCREEN"
+      }
    } 
 }) 

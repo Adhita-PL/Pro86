@@ -10,7 +10,6 @@ const MyHeader = props=>{
                   text:props.title,
 
                   style:{
-                  
                    color:"BLACK",
                     fontSize:20,
                     fontWeight:"bold",
