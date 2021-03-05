@@ -26,16 +26,12 @@ export default class HomeScreen extends React.Component {
       }
     
       getRequests =()=>{
-
         this.requestRef = db.collection("exchange_requests")
-
         .onSnapshot((snapshot)=>{
           var requestedList = snapshot.docs.map(document => document.data());
-          
           this.setState({
             requests : requestedList
           });
-
         })
       }
     

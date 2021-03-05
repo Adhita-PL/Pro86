@@ -39,10 +39,10 @@ export default class RecieverDetailsScreen extends React.Component{
     addBarters = () => {
         db.collection("my_barters").add({
             item_name : this.state.itemName,
-            requestId : this.state.requestId,
-            requested_by : this.state.exchangerName,
-            donorId : this.state.userId,
-            request_status: "Donor Interested"
+            "requestId" : this.state.requestId,
+            "requested_by" : this.state.exchangerName,
+            "donorId" : this.state.userId,
+            "request_status": "Donor Interested"
         })
     }
     render() {
