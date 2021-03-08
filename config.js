@@ -1,14 +1,13 @@
 import firebase from 'firebase';
 require('@firebase/firestore')
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
-  apiKey: "AIzaSyAZHf_Ufi0qIMFwSZgtCXLCjrBoKQLd2f0",
-  authDomain: "barter-system-app-629ea.firebaseapp.com",
-  projectId: "barter-system-app-629ea",
-  storageBucket: "barter-system-app-629ea.appspot.com",
-  messagingSenderId: "49824994040",
-  appId: "1:49824994040:web:739867496163dc8544210d"
+  apiKey: "AIzaSyATilSw5ryPbv9HWHc3aDHPa2zWABjdEjI",
+  authDomain: "barter-system-app-45263.firebaseapp.com",
+  projectId: "barter-system-app-45263",
+  storageBucket: "barter-system-app-45263.appspot.com",
+  messagingSenderId: "954402644134",
+  appId: "1:954402644134:web:d547f07cd1e53096049467"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

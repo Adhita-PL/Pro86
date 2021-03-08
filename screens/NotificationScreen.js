@@ -7,27 +7,30 @@ import db from '../config.js'
 
 export default class NotificationScreen extends React.Component{
     constructor(){
-        super();
-        this.state={
-            allNotifications : [],
-            userId:firebase.auth().currentUser.email
-        }
+    super();
+    this.state={
+        allNotifications : [],
+        userId:firebase.auth().currentUser.email
     }
+   }
     getNotifications=()=>{
      db.collection("all_notifications").where("notification_status","==","unread")
      .where("targeted_user_id","==",this.state.userId).get()
-        onSnapShot((snapshot)=>{
-            var allNotification = []
-            snapshot.docs.map((doc)=>{
-                var notification = doc.data()
-                notification["doc_id"] = doc.id
-                allNotification.push(notification)
-            })
-            this.setState({
-                allNotifications:[...this.state.allNotifications,allNotification]
-            })
-        })   
+         onSnapShot((snapshot)=>{
+          var allNotification = []
+          snapshot.docs.map((doc)=>{
+            var notification = doc.data()
+            notification["doc_id"] = doc.id
+            allNotification.push(notification)
+          })
+          this.setState({
+              allNotifications:[...this.state.allNotifications,allNotification]
+          })
+         })
+
+     
     }
+
     renderItem = ( {item, i} ) =>{
         return (
           <ListItem
@@ -39,11 +42,15 @@ export default class NotificationScreen extends React.Component{
               bottomDivider
           />
         )
-    }
+      }
+
     render(){
-        return(    
+        return(
+          
            <View style={{flex:1}}>
+             <MyHeader title="Notifications" navigator={this.props.navigation}/>
             <View style={{flex:1}}>
+          
               {
                 this.state.allNotifications.length === 0
                 ?(
@@ -52,6 +59,8 @@ export default class NotificationScreen extends React.Component{
                   </View>
                 )
                 :(
+                
+              
                   <FlatList
                     keyExtractor={this.keyExtractor}
                     data={this.state.allNotifications}
