@@ -61,7 +61,7 @@ export default class HomeScreen extends React.Component{
                     }}
                     value={this.state.item}
                 />
-                <TextInput style={[styles.formTextInput,{height:300}]}
+                <TextInput style={[styles.formTextInput,{height:250}]}
                     placeholder="Item description"
                     numberOfLines={8}
                     multiline

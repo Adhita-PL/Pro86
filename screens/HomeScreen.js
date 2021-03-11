@@ -3,12 +3,7 @@ import {
     StyleSheet, 
     Text, 
     View, 
-    TouchableOpacity, 
-    ScrollView, 
-    KeyboardAvoidingView,
-    Alert,
-    TextInput, 
-    Modal,
+    TouchableOpacity,   
     FlatList,
 } from 'react-native';
 import db from "../config";
@@ -23,7 +18,7 @@ export default class HomeScreen extends React.Component {
           requests : []
         }
       this.requestRef= null
-      }
+    }
     
       getRequests =()=>{
         this.requestRef = db.collection("exchange_requests")
