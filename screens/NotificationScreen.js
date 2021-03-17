@@ -50,7 +50,6 @@ export default class NotificationScreen extends Component{
       return (
         <ListItem
           key={index}
-        
           title={item.item_name}
           titleStyle={{ color: 'black', fontWeight: 'bold' }}
           subtitle={item.message}

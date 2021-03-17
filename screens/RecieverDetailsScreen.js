@@ -36,6 +36,7 @@ export default class ReceiverDetailsScreen extends Component{
 
 
 getreceiverDetails(){
+  console.log("receiver ",this.state.receiverId);
   db.collection('users').where('username','==',this.state.receiverId).get()
   .then(snapshot=>{
     snapshot.forEach(doc=>{
